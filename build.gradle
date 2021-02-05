@@ -5,12 +5,28 @@ plugins {
 
 group 'lk.ijse.dep.web'
 version '1.0.0'
+sourceCompatibility = 8
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.27.Final'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+    implementation group: 'org.eclipse', name: 'yasson', version: '2.0.1'
+    implementation group: 'org.glassfish', name: 'javax.json', version: '1.1.4'
+    implementation group: 'javax.json.bind', name: 'javax.json.bind-api', version: '1.0'
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.8.0'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+
 }
