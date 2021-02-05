@@ -18,8 +18,7 @@ import java.sql.Date;
 @Table(name = "issue")
 public class Issue implements SuperEntity{
     @EmbeddedId
-    private
-    IssuePK issuePK;
+    private IssuePK issuePK;
     private Date date;
 
     public Issue(int memberId, int bookId, Date date) {

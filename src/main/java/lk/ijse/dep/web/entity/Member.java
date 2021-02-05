@@ -21,5 +21,6 @@ public class Member implements SuperEntity{
     private Name name;
     @Column(name = "contact_no")
     private String contactNo;
+    @Enumerated(EnumType.ORDINAL)
     private Gender gender;
 }
